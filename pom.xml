@@ -273,10 +273,11 @@
 			<artifactId>fitnesse</artifactId>
 			<version>20060719</version>
 		</dependency>
+	<!-- https://mvnrepository.com/artifact/com.github.lkoskela/beaninject -->
 		<dependency>
-			<groupId>beaninject</groupId>
-			<artifactId>beaninject</artifactId>
-			<version>0.6</version>
+  		  <groupId>com.github.lkoskela</groupId>
+  		  <artifactId>beaninject</artifactId>
+   		 <version>0.9</version>
 		</dependency>
 	</dependencies>
 
