@@ -3,10 +3,10 @@ jobs:
   build:
     
     working_directory: ~/circleci-demo-java-spring
-
+    script: "mvn cobertura:cobertura"
     docker:
       - image: circleci/openjdk:8-jdk-browsers
-    script: "mvn cobertura:cobertura"
+
     steps:
 
       - checkout
