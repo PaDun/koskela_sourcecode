@@ -6,7 +6,7 @@ jobs:
 
     docker:
       - image: circleci/openjdk:8-jdk-browsers
-
+    script: "mvn cobertura:cobertura"
     steps:
 
       - checkout
@@ -28,4 +28,4 @@ jobs:
       
       - store_artifacts:
           path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
-   script: "mvn cobertura:cobertura"
+
