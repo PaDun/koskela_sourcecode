@@ -4,6 +4,8 @@ jobs:
     
     working_directory: ~/circleci-demo-java-spring
     script: "mvn cobertura:cobertura"
+    after_success:
+      - bash <(curl -s https://codecov.io/bash)
     docker:
       - image: circleci/openjdk:8-jdk-browsers
 
@@ -29,5 +31,4 @@ jobs:
       - store_artifacts:
           path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
 
-    after_success:
-      - bash <(curl -s https://codecov.io/bash)
+ 
