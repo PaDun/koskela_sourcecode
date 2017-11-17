@@ -22,14 +22,14 @@ jobs:
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
       
       - run: mvn package
-      
+         script: "mvn cobertura:cobertura"
       - store_test_results:
           path: target/surefire-reports
       
       - store_artifacts:
           path: target/demo-java-spring-0.0.1-SNAPSHOT.jar
           
-    script: "mvn cobertura:cobertura"
+
     after_success:
       - bash <(curl -s https://codecov.io/bash)
  
